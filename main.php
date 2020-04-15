@@ -30,10 +30,10 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 			<?php echo strip_tags($conf['title']) ?>]</title>
 		<?php tpl_metaheaders()?>
 		<?php echo tpl_favicon(array(
-			'favicon',
-			'mobile',
-		))
-		?>
+            'favicon',
+            'mobile',
+        ))
+        ?>
 
 		<?php tpl_includeFile('meta.html')?>
 
@@ -74,16 +74,16 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
 
 						<?php
-						$menu_items = (new \dokuwiki\Menu\UserMenu())->getItems();
-						foreach($menu_items as $item) {
-						echo '<li>'
-							.'<a class="nav-link" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-							.'<i class="argon-doku-navbar-icon">'.inlineSVG($item->getSvg()).'</i>'
-							. '<span class="a11y">'.$item->getLabel().'</span>'
-							. '</a></li>';
-						}
+                        $menu_items = (new \dokuwiki\Menu\UserMenu())->getItems();
+                        foreach ($menu_items as $item) {
+                            echo '<li>'
+                            .'<a class="nav-link" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                            .'<i class="argon-doku-navbar-icon">'.inlineSVG($item->getSvg()).'</i>'
+                            . '<span class="a11y">'.$item->getLabel().'</span>'
+                            . '</a></li>';
+                        }
 
-						?>
+                        ?>
 
 
 						<li class="nav-item">
@@ -110,22 +110,22 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
 
 					<?php
-					// Render the content initially
-					ob_start();
-					tpl_content(false);
-					$buffer = ob_get_clean();
-					?>
+                    // Render the content initially
+                    ob_start();
+                    tpl_content(false);
+                    $buffer = ob_get_clean();
+                    ?>
 
-					<!-- left sidebar -->
+					<!-- left sidebar
 					<div class="col-12 col-md-3 col-xl-2 ct-sidebar">
 						<nav class="collapse ct-links" id="ct-docs-nav">
 							<?php
-							if (!empty($_SERVER['REMOTE_USER'])) {
-								echo '<li class="nav-item nav-link"> ';
-								tpl_userinfo();
-								echo '</li>';
-							}
-							?>
+                            if (!empty($_SERVER['REMOTE_USER'])) {
+                                echo '<li class="nav-item nav-link"> ';
+                                tpl_userinfo();
+                                echo '</li>';
+                            }
+                            ?>
 							<?php if ($showTools): ?>
 							<div id="dokuwiki__pagetools" class="ct-toc-item active">
 								<a class="ct-toc-link">
@@ -133,14 +133,14 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 								</a>
 								<ul class="nav ct-sidenav">
 									<?php
-									$menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-									foreach($menu_items as $item) {
-									echo '<li>'
-										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-										. $item->getLabel()
-										. '</a></li>';
-									}
-									?>
+                                    $menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
+                                    foreach ($menu_items as $item) {
+                                        echo '<li>'
+                                        .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                        . $item->getLabel()
+                                        . '</a></li>';
+                                    }
+                                    ?>
 								</ul>
 							</div>
 							<?php endif;?>
@@ -152,15 +152,15 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 								</a>
 								<ul class="nav ct-sidenav">
 									<?php
-									$menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
-									foreach($menu_items as $item) {
-									echo '<li>'
-										.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-										. $item->getLabel()
-										. '</a></li>';
-									}
+                                    $menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
+                                    foreach ($menu_items as $item) {
+                                        echo '<li>'
+                                        .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                        . $item->getLabel()
+                                        . '</a></li>';
+                                    }
 
-									?>
+                                    ?>
 								</ul>
 							</div>
 
@@ -180,11 +180,10 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 							<?php endif;?>
 						</nav>
 					</div>
-
+				-->
 
 					<!-- center content -->
-
-					<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 ct-content" role="main">
+					<main class="col-12 col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 py-md-3 pl-md-5 ct-content" role="main">
 
 						<div id="dokuwiki__top" class="site
 						<?php echo tpl_classes(); ?>
@@ -206,7 +205,9 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 								<?php }?>
 							</ol>
 						</nav>
-
+						<div class="kpw-table-of-contents">
+                            <?php tpl_toc()?>
+                        </div>
 
 						<!-- Wiki Contents -->
 						<div id="dokuwiki__content">
@@ -248,15 +249,15 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 									<div class="row">
 									<div class="argon-doku-footer-fullmenu">
 										<?php
-										$menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
-										foreach($menu_items as $item) {
-										echo '<li>'
-											.'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-											.'<i class="">'.inlineSVG($item->getSvg()).'</i>'
-											. '<span class="a11y">'.$item->getLabel().'</span>'
-											. '</a></li>';
-										}
-										?>
+                                        $menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
+                                        foreach ($menu_items as $item) {
+                                            echo '<li>'
+                                            .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                            .'<i class="">'.inlineSVG($item->getSvg()).'</i>'
+                                            . '<span class="a11y">'.$item->getLabel().'</span>'
+                                            . '</a></li>';
+                                        }
+                                        ?>
 									</div>
 									<?php tpl_includeFile('footer.html') ?>
 									</div>
@@ -271,12 +272,13 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
 
 
-					<!-- Right Sidebar -->
+					<!-- Right Sidebar
 					<div class="d-none d-xl-block col-xl-2 ct-toc">
 						<div>
 							<?php tpl_toc()?>
 						</div>
-					</div>
+                    </div>
+                    -->
 
 				</div>
 			</div>
