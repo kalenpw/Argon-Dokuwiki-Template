@@ -116,71 +116,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                     $buffer = ob_get_clean();
                     ?>
 
-					<!-- left sidebar
-					<div class="col-12 col-md-3 col-xl-2 ct-sidebar">
-						<nav class="collapse ct-links" id="ct-docs-nav">
-							<?php
-                            if (!empty($_SERVER['REMOTE_USER'])) {
-                                echo '<li class="nav-item nav-link"> ';
-                                tpl_userinfo();
-                                echo '</li>';
-                            }
-                            ?>
-							<?php if ($showTools): ?>
-							<div id="dokuwiki__pagetools" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo $lang['page_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-                                    $menu_items = (new \dokuwiki\Menu\PageMenu())->getItems();
-                                    foreach ($menu_items as $item) {
-                                        echo '<li>'
-                                        .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-                                        . $item->getLabel()
-                                        . '</a></li>';
-                                    }
-                                    ?>
-								</ul>
-							</div>
-							<?php endif;?>
-
-							<div class="ct-toc-item active">
-
-								<a class="ct-toc-link">
-									<?php echo $lang['site_tools'] ?>
-								</a>
-								<ul class="nav ct-sidenav">
-									<?php
-                                    $menu_items = (new \dokuwiki\Menu\SiteMenu())->getItems();
-                                    foreach ($menu_items as $item) {
-                                        echo '<li>'
-                                        .'<a class="" href="'.$item->getLink().'" title="'.$item->getTitle().'">'
-                                        . $item->getLabel()
-                                        . '</a></li>';
-                                    }
-
-                                    ?>
-								</ul>
-							</div>
-
-
-
-							<?php if ($showSidebar): ?>
-							<div id="dokuwiki__aside" class="ct-toc-item active">
-								<a class="ct-toc-link">
-									<?php echo "Sidebar" ?>
-								</a>
-								<div class="leftsidebar">
-									<?php tpl_includeFile('sidebarheader.html')?>
-									<?php tpl_include_page($conf['sidebar'], 1, 1)?>
-									<?php tpl_includeFile('sidebarfooter.html')?>
-								</div>
-							</div>
-							<?php endif;?>
-						</nav>
-					</div>
-				-->
 
 					<!-- center content -->
 					<main class="col-12 col-md-12 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 py-md-3 pl-md-5 ct-content" role="main">
@@ -275,7 +210,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 					<!-- Right Sidebar
 					<div class="d-none d-xl-block col-xl-2 ct-toc">
 						<div>
-							<?php tpl_toc()?>
+							<?php //tpl_toc()?>
 						</div>
                     </div>
                     -->
