@@ -4,7 +4,7 @@
 *  Based on the Argon Design System by Creative Tim
 *  Ported to Dokuwiki by Anchit (@IceWreck)
 =========================================================
- -->
+-->
 
 <?php
 if (!defined('DOKU_INC')) {
@@ -17,9 +17,9 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 $showTools = !tpl_getConf('hideTools') || (tpl_getConf('hideTools') && !empty($_SERVER['REMOTE_USER']));
 $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,7 +27,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 		<link rel="icon" type="image/png" href="assets/img/favicon.png">
 		<title>
 			<?php tpl_pagetitle()?> [
-			<?php echo strip_tags($conf['title']) ?>]</title>
+            <?php echo strip_tags($conf['title']) ?>]
+        </title>
 		<?php tpl_metaheaders()?>
 		<?php echo tpl_favicon(array(
             'favicon',
@@ -96,7 +97,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 					</ul>
 				</div>
 				<button class="navbar-toggler ct-search-docs-toggle d-block d-md-none ml-auto ml-sm-0" type="button"
-					data-toggle="collapse" data-target="#ct-docs-nav" aria-controls="ct-docs-nav" aria-expanded="false"
+					data-toggle="collapse" data-target="#kpw-table-of-contents" aria-controls="ct-docs-nav" aria-expanded="false"
 					aria-label="Toggle docs navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -140,7 +141,8 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 								<?php }?>
 							</ol>
 						</nav>
-						<div class="kpw-table-of-contents">
+
+						<div id="kpw-table-of-contents" class="collapse navbar-collapse kpw-table-of-contents">
                             <?php tpl_toc()?>
                         </div>
 

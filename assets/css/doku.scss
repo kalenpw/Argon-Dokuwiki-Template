@@ -34,7 +34,7 @@ input, select {
 // Fix Content Hidden behind navbar when you reach via anchor
 :target {
     // padding-top: 6rem;
- }
+}
 
 // Selection
 ::-moz-selection {
@@ -485,6 +485,20 @@ textarea {
         li:nth-of-type(1) {
             margin-left: 0em;
         }
+    }
+}
+
+#dw__toc {
+    background-color: white;
+}
+
+#dw__toc h3 {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    #dw__toc {
+        width: 100%;
     }
 }
 

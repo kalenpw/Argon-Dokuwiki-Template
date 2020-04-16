@@ -25527,4 +25527,18 @@ textarea {
   margin-left: 0em;
 }
 
+#dw__toc {
+  background-color: white;
+}
+
+#dw__toc h3 {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  #dw__toc {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=doku.css.map */
