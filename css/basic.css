@@ -210,12 +210,11 @@ th {
 
 /*____________ links ____________*/
 
-a {
-}
 a:link,
 a:visited {
+    font-weight: bold;
     text-decoration: none;
-    color: #00c; /* §colour */
+    color: #333;
 }
 a:link:hover,
 a:visited:hover,
