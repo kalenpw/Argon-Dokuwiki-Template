@@ -25541,5 +25541,8 @@ textarea {
     width: 100%;
   }
 }
+.wtSpreader {
+  width: 100% !important;
+}
 
 /*# sourceMappingURL=doku.css.map */
