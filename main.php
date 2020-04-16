@@ -204,17 +204,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 						<?php tpl_indexerWebBug(); ?>
 					</main>
 
-
-
-
-					<!-- Right Sidebar
-					<div class="d-none d-xl-block col-xl-2 ct-toc">
-						<div>
-							<?php //tpl_toc()?>
-						</div>
-                    </div>
-                    -->
-
 				</div>
 			</div>
 		</div>

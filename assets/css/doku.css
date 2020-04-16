@@ -106,6 +106,7 @@ body {
 }
 
 hr {
+  border: 1px solid #eee !important;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
@@ -25237,10 +25238,6 @@ input, select {
   background-color: white !important;
   border-radius: 0.25rem;
   border-color: #5e72e4;
-}
-
-:target {
-  padding-top: 6rem;
 }
 
 ::-moz-selection {

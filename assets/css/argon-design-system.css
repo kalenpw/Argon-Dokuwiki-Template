@@ -98,6 +98,7 @@ body {
 }
 
 hr {
+  border: 1px solid #eee !important;
   box-sizing: content-box;
   height: 0;
   overflow: visible;
