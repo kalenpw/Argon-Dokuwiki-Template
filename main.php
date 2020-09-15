@@ -133,11 +133,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 						<!-- Trace/Navigation -->
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
-								<?php if ($conf['breadcrumbs']) {?>
-								<div class="breadcrumbs"><?php tpl_breadcrumbs()?></div>
-								<?php }?>
 								<?php if ($conf['youarehere']) {?>
 								<div class="breadcrumbs"><?php tpl_youarehere()?></div>
+								<?php }?>
+								<?php if ($conf['breadcrumbs']) {?>
+								<div class="breadcrumbs"><?php tpl_breadcrumbs()?></div>
 								<?php }?>
 							</ol>
 						</nav>
