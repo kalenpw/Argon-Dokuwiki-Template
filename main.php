@@ -59,17 +59,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
 			<header
 				class="navbar navbar-horizontal navbar-expand navbar-dark flex-row align-items-md-center ct-navbar bg-primary py-2">
+                
 
-
-				<div class="btn btn-neutral btn-icon">
-					<span class="btn-inner--icon">
-						<!-- <i class=""></i> -->
-					</span>
-					<span
-						class="nav-link-inner--text"><?php tpl_link(wl(), $conf['title'], 'accesskey="h" title="[H]"')?></span>
-
-				</div>
-
+                <a href="/" class="btn btn-neutral btn-icon">
+                    <?= $conf['title'] ?>
+                </a>
 
 				<div class="d-none d-sm-block ml-auto">
 					<ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
