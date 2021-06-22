@@ -1,6 +1,10 @@
-# Argon Dokuwiki Template
+# SimpleDoku
 
-Argon - a clean, responsive, modern template for Dokuwiki.
+Minimal DokuWiki theme forked from [Argon](https://github.com/IceWreck/Argon-Dokuwiki-Template) 
+
+<hr>
+
+**Original Readme**
 
 ![Screenshot](screenshots/1.png)
 
