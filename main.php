@@ -104,6 +104,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
         .kpw-full-menu {
             list-style-type: none;
             display: inline !important;
+            padding: 0;
         }
 
         .kpw-full-menu li {
@@ -116,6 +117,12 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
         .kpw-content-wrapper {
             flex: 1 0 auto !important;
+        }
+        .kpw-footer-search input[type=text]{
+            margin-left: 0 !important;
+        }
+        .kpw-footer-search button {
+            margin-right: 0 !important;
         }
     </style>
 
@@ -234,7 +241,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                 </div>
                 <div class="row">
 
-                    <div class="footer-search">
+                    <div class="kpw-footer-search footer-search">
                         <?php tpl_searchform() ?>
                     </div>
 
