@@ -109,6 +109,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
 
         .kpw-full-menu li {
             display: inline !important;
+            margin: 10px !important;
         }
 
         .kpw-full-menu li a {
