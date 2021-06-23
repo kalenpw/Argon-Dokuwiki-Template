@@ -1,7 +1,7 @@
-base     argon
-author   Anchit
-email    ab@abifog.com
-date     2020-04-13
-name     Argon Template
-desc     Argon - clean, responsive, modern template for Dokuwiki.
-url      https://www.dokuwiki.org/template:argon
+base     SimpleDoku
+author   kalenpw
+email    kalenpw@kalenpw.com
+date     2021-06-23
+name     SimpleDoku
+desc     SimpleDoku - clean, responsive, modern template for Dokuwiki.
+url      https://github.com/kalenpw/SimpleDoku
