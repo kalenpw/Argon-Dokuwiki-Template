@@ -57,10 +57,27 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
         body {
             height: 100% !important;
         }
-
         body {
             display: flex !important;
             flex-direction: column !important;
+            font-family: 'Avenir', 'Arial', sans-serif;
+            color: #222;
+        }
+        .table, #dokuwiki__content table {
+            color: #222;
+        }
+        #dokuwiki__content .secedit button {
+            background-color: #343a40;
+            border: 1px solid #343a40;
+        }
+        #dokuwiki__content .secedit button:hover {
+            background-color: #343a40;
+            border: 1px solid #343a40;
+        }
+        #dokuwiki__content .secedit button[title=Table] {
+            background-color: white;
+            border: 1px solid #343a40;
+            color: #222;
         }
 
         /* kalen overrides  */
@@ -71,6 +88,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
         .kpw-header-logo {
             font-size: 20px;
             color: white !important;
+            font-weight: normal !important;
         }
 
         .kpw-header-logo:hover {
