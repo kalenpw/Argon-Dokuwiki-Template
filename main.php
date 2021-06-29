@@ -240,8 +240,6 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                         </div>
                     </div>
 
-                    <hr />
-
                     <?php tpl_indexerWebBug(); ?>
                 </main>
 
