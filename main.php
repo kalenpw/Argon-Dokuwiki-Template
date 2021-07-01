@@ -57,23 +57,29 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
         body {
             height: 100% !important;
         }
+
         body {
             display: flex !important;
             flex-direction: column !important;
             font-family: 'Avenir', 'Arial', sans-serif;
             color: #222;
         }
-        .table, #dokuwiki__content table {
+
+        .table,
+        #dokuwiki__content table {
             color: #222;
         }
+
         #dokuwiki__content .secedit button {
             background-color: #343a40;
             border: 1px solid #343a40;
         }
+
         #dokuwiki__content .secedit button:hover {
             background-color: #343a40;
             border: 1px solid #343a40;
         }
+
         #dokuwiki__content .secedit button[title=Table] {
             background-color: white;
             border: 1px solid #343a40;
@@ -137,11 +143,28 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
         .kpw-content-wrapper {
             flex: 1 0 auto !important;
         }
-        .kpw-footer-search input[type=text]{
+
+        .kpw-footer-search input[type=text] {
             margin-left: 0 !important;
         }
+
         .kpw-footer-search button {
             margin-right: 0 !important;
+        }
+
+        #kpw-table-of-contents input,
+        button {
+            border: 1px solid black !important;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .advancedOptions {
+                width: 100%;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: #222 !important;
         }
     </style>
 
@@ -226,7 +249,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                     </nav>
 
                     <div id="kpw-table-of-contents" class="collapse navbar-collapse kpw-table-of-contents">
-                        <?php tpl_toc() ?>
+                        <?php tpl_searchform() ?>
                     </div>
 
                     <!-- Wiki Contents -->
@@ -267,6 +290,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                 <div class="row" style="justify-content: center">
                     <ul class="kpw-full-menu aargon-doku-footer-fullmenu">
                         <?php
+
                         $menu_items = (new \dokuwiki\Menu\MobileMenu())->getItems();
                         foreach ($menu_items as $item) {
                             echo '<li>'
@@ -276,6 +300,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                                 . '</a></li>';
                         }
                         ?>
+
                     </ul>
                     <?php tpl_includeFile('footer.html') ?>
                 </div>
