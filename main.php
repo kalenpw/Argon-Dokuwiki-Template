@@ -158,6 +158,25 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
             border: 1px solid black !important;
         }
 
+        #kpw-table-of-contents .no {
+            width: 50% !important;
+            margin: 0 !important;
+            margin-right: 5px;
+            display: inline;
+        }
+
+        #kpw-table-of-contents input {
+            width: 50% !important;
+            margin: 0 !important;
+            margin-right: 5px !important;
+            display: inline !important;
+        }
+
+        #kpw-table-of-contents button {
+            margin: 0 !important;
+            float: right !important;
+        }
+
         @media only screen and (max-width: 1000px) {
             .advancedOptions {
                 width: 100%;
@@ -181,7 +200,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                 <?= $conf['title'] ?>
             </a>
 
-            <div class="d-none d-sm-block ml-auto">
+            <div class="d-none d-md-block ml-auto">
                 <ul class="navbar-nav ct-navbar-nav flex-row align-items-center">
 
                     <?php
@@ -250,7 +269,9 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT == 'show');
                     </nav>
 
                     <div id="kpw-table-of-contents" class="collapse navbar-collapse kpw-table-of-contents">
-                        <?php tpl_searchform() ?>
+                        <?php
+                            tpl_searchform();
+                        ?>
                     </div>
 
                     <!-- Wiki Contents -->
